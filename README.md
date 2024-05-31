@@ -62,4 +62,4 @@ We welcome contributions! Please follow these steps:
 
 ## Contact Information
 
-For questions or support, please contact [Your Name](mailto:chouaiba629@gmail.com).
+For questions or support, please contact [Me](mailto:chouaiba629@gmail.com).
