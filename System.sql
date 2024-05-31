@@ -146,15 +146,20 @@ INSERT INTO OrderLine (order_id, product_id, quantity) VALUES
   (2015, 11, 2);
 
 -- Create users
-CREATE USER user1 IDENTIFIED BY user_password1;
-CREATE USER user2 IDENTIFIED BY user_password2;
-CREATE USER user3 IDENTIFIED BY user_password3;
-CREATE USER user4 IDENTIFIED BY user_password4;
-CREATE USER user5 IDENTIFIED BY user_password5;
+CREATE USER user1_Alice IDENTIFIED BY user_password1;
+CREATE USER user2_Bob IDENTIFIED BY user_password2;
+CREATE USER user3_Clare IDENTIFIED BY user_password3;
+CREATE USER user4_David IDENTIFIED BY user_password4;
+CREATE USER user5_Emily IDENTIFIED BY user_password5;
 
 -- Grant access to users
-GRANT CREATE SESSION TO user1, user2, user3, user4, user5; 
-GRANT CREATE ANY TABLE TO user1, user2, user3, user4, user5; 
-GRANT CREATE DATABASE LINK TO user1, user2, user3, user4, user5; 
-GRANT CREATE SYNONYM TO user1, user2, user3, user4, user5;
+GRANT CREATE SESSION TO user1_Alice, user2_Bob, user3_Clare, user4_David, user5_Emily; 
+GRANT CREATE ANY TABLE TO user1_Alice, user2_Bob, user3_Clare, user4_David, user5_Emily; 
+GRANT CREATE DATABASE LINK TO user1_Alice, user2_Bob, user3_Clare, user4_David, user5_Emily; 
+GRANT CREATE SYNONYM TO user1_Alice, user2_Bob, user3_Clare, user4_David, user5_Emily;
 ALTER USER system ACCOUNT UNLOCK;
+ALTER USER user1_Alice QUOTA 120M ON SYSTEM; 
+ALTER USER user2_Bob QUOTA 120M ON SYSTEM;
+ALTER USER user3_Clare QUOTA 120M ON SYSTEM;
+ALTER USER user4_David QUOTA 120M ON SYSTEM;
+ALTER USER user5_Emily QUOTA 120M ON SYSTEM;
